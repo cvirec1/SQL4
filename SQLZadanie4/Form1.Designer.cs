@@ -40,6 +40,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgwPerson = new System.Windows.Forms.DataGridView();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPerson)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,10 +142,18 @@
             // dgwPerson
             // 
             this.dgwPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwPerson.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colName});
             this.dgwPerson.Location = new System.Drawing.Point(327, 45);
             this.dgwPerson.Name = "dgwPerson";
             this.dgwPerson.Size = new System.Drawing.Size(867, 459);
             this.dgwPerson.TabIndex = 11;
+            // 
+            // colName
+            // 
+            this.colName.DataPropertyName = "Name";
+            this.colName.HeaderText = "Name";
+            this.colName.Name = "colName";
             // 
             // Form1
             // 
@@ -185,6 +194,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgwPerson;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
     }
 }
 

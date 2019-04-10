@@ -16,8 +16,11 @@ namespace SQLZadanie4
         public Form1()
         {
             InitializeComponent();
+            //skrytie stlpcov a nasledne je potrebne vymenovat stlpce na zobrazenie
+            dgwPerson.AutoGenerateColumns = false;
             dgwPerson.DataSource = lg.FillDataSet();
             dgwPerson.DataMember = "Person";
+            
             
         }
 
