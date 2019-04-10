@@ -39,6 +39,8 @@
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.dgwPerson = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwPerson)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFistName
@@ -136,11 +138,20 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // dgwPerson
+            // 
+            this.dgwPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwPerson.Location = new System.Drawing.Point(327, 45);
+            this.dgwPerson.Name = "dgwPerson";
+            this.dgwPerson.Size = new System.Drawing.Size(867, 459);
+            this.dgwPerson.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 469);
+            this.ClientSize = new System.Drawing.Size(1245, 614);
+            this.Controls.Add(this.dgwPerson);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
@@ -154,6 +165,7 @@
             this.Controls.Add(this.txtFistName);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dgwPerson)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +184,7 @@
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DataGridView dgwPerson;
     }
 }
 

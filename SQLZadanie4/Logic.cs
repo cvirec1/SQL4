@@ -212,5 +212,34 @@ namespace SQLZadanie4
                 throw e;
             }
         }
+        public DataSet FillDataSet()
+        {
+            SqlConnection connection = new SqlConnection(connString);
+            string sqlQuery = @"SELECT TOP (1000) [BusinessEntityID]
+                            ,[PersonType]
+                            ,[NameStyle]
+                            ,[Title]
+                            ,[FirstName]
+                            ,[MiddleName]
+                            ,[LastName]
+                            ,[Suffix]
+                            ,[EmailPromotion]
+                            ,[AdditionalContactInfo]
+                            ,[Demographics]
+                            ,[rowguid]
+                            ,[ModifiedDate]
+                            FROM[AdventureWorks].[Person].[Person]";
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, connection);
+
+            DataSet ds = new DataSet();
+            adapter.Fill(ds,"Person");
+            DataTable dt = ds.Tables["Person"];
+            dt.Columns.Add("Name", typeof(string));
+            foreach (DataRow dr in dt.Rows)
+            {
+                dr.SetField("Name", $"{dr["LastName"]} {dr["MiddleName"]} {dr["FirstName"]}");
+            }
+            return ds;
+        }
     }
 }

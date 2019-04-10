@@ -16,6 +16,8 @@ namespace SQLZadanie4
         public Form1()
         {
             InitializeComponent();
+            dgwPerson.DataSource = lg.FillDataSet();
+            dgwPerson.DataMember = "Person";
             
         }
 
